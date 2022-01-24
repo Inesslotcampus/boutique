@@ -32,26 +32,11 @@
       <a href="../catalogue/catalogue.html" class="catalogue">Catalogue</a>
     </div>
     
-  </div>
-
-<?php
-$nom="Table cube";
-$prix=" 250 euros";
-$photo= "<img src=imagecube.jfif>";
-
-echo $nom;
-echo "<br /> $photo";
-echo  "<br /> $prix";?>
-
-
-<div class="footer">
-    <ul>
-      <li><a href="#A">Accueil</a></li>
-      <li><a href="#H">Notre histoire</a></li>
-      <li><a href="#T">Notre équipe</a></li>
-      <li><a href="#"><img src="../img/instagram-svgrepo-com.svg" alt="instagram" class="icone"></a>
-        <a href="#"><img src="../img/facebook-svgrepo-com.svg" alt="facebook" class="icone"></a>
-        <a href="#"><img src="../img/youtube-svgrepo-com.svg" alt="youtube" class="icone"></a>
-      </li>
-    </ul>
+    
+    
+    <section class="showcase" id="A">
+      <video class="video" src="../Video/Sans titre (1).mp4" muted autoplay loop width="100%">
+      </video>
+      
+    </section>
   </div>
