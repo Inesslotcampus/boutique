@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.blank {
+    color: rgba(255, 255, 255, 0);
+}
+
+/**/
+
+
+
+/* \/ \/ \/ nav-bar \/ \/ \/ */
+
+.button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navbar {
+    height: auto;
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-around;
+    
+    z-index: 1;
+    transition: 1s;
+}
+
+.logo {
+    margin: 1rem 1rem 1.75rem 1rem;
+    width: 141,25px;
+    height: 125px;
+}
+
+
+.button {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    align-items: center;
+    margin: 0 0 0 0;
+    justify-content: space-between;
+}
+
+
+.team, .histoire {
+    display: flex;
+    padding: 8px;
+    font-size: 2rem;
+    font-family: 'Cabin', sans-serif;
+}
+
+.button a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    transition: 800ms;
+}
+
+/* /\ /\ /\ nav-bar /\ /\ /\ */
+
+
+/* \/ \/ \/ Video \/ \/ \/ */
+
+.HEAD {
+    display: flex;
+    justify-content: center;
+}
+
+.video {
+    position: relative;
+}
+
+.prez {
+    position: absolute;
+    z-index: 20;
+    margin-top: 18%;
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+    font-size: 3rem;
+    height: auto;
+    color: white;
+}
+
+.catalogue {
+    z-index: 10;
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Cabin', sans-serif;
+    border: rgb(255, 255, 255) solid;
+    border-radius: 20px;
+    transition: 1s;
+    margin-top: 15rem;
+}
+
+.prez p {
+    font-style: italic;
+    color: azure;
+}
+
+.prez h1 {
+    color: white;
+}
+
+.catalogue:hover {
+    background-color: rgba(255, 255, 255, 0.808);
+    transform: scale(1.2);
+    border: black solid;
+    color: black;
+
+}
+
+
+/* /\ /\ /\ Video /\ /\ /\ */
+
+
+/* \/ \/ \/ Histoire \/ \/ \/ */
+
+.phistoire {
+    margin: 5rem 0 10rem 2rem;
+}
+
+.favelas {
+    width: 800px;
+    height: 550px;
+}  
+
+h3{
+    font-family: 'Cabin', sans-serif;
+    text-align: center;
+}
+.recithistoire{
+    font-family: 'Cabin', sans-serif;
+    font-size: 150%;
+    padding: 5em 1em 1em 1em;
+    margin-top: 1rem;
+}
+
+.contenuhistoire {
+    display: flex;
+}
+
+.phistoire h3 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+}
+
+/* /\ /\ /\ Histoire /\ /\ /\ */
+
+
+/* \/ \/ \/ Equipe \/ \/ \/ */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+
+.equipe-wrapper {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.equipe .card {
+    background-color: #FEFFFF;
+    height: 375px;
+    min-width: 200px;
+    width: 200px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 45px;
+    transition: 1.5s;
+}
+.equipe h3 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+
+.img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 25px;
+    object-fit: cover;
+}
+
+.card article {
+    padding: 20px;
+    text-align: center;
+}
+.card article h4 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+.card article h6 {
+    font-size: 14px;
+}
+.card article p {
+    margin: 20px 0;
+    font-size: 12px;
+    height: 46px;
+}
+
+.equipe a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+.social span {
+    margin: 0 5px;
+}
+
+.pteam {
+    display: flex;
+    justify-content: center;
+    font-family: 'Cabin', sans-serif;
+    background: linear-gradient(360deg, #000000 0.81%, rgba(255, 255, 255, 0) 90.29%);
+    padding: 10rem 0 15rem 0;
+}
+
+.card:hover {
+    background-color: rgba(158, 158, 158, 0.205);
+    color: white;
+    transform: scale(1.25);
+}
+
+/* /\ /\ /\ Equipe /\ /\ /\ */
+
+/* \/ \/ \/ footer \/ \/ \/ */
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    bottom: 0;
+}
+
+.footer ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 2rem 0 0rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    height: 15rem;
+}
+
+.footer li {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Cabin', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.icone {
+    margin: 2rem 2rem 0 2rem;
+    width: 35px;
+    height: 35px;
+}
+
+/* /\ /\ /\ footer /\ /\ /\ */
+
+/* \/ \/ \/ Media-Queries \/ \/ \/ */
+
+
+
+@media screen and (max-width: 1330px) {
+
+    /* \/ \/ \/ Nav bar \/ \/ \/ */
+
+    .navbar {
+        transform: scale(0.7);
+    }
+
+    /* /\ /\ /\ Nav bar /\ /\ /\ */
+
+    .catalogue {
+        transform: scale(0.7);
+    }
+
+    .prez {
+        transform: scale(0.7);
+        margin-top: 15%;
+    }
+    
+    /* \/ \/ \/ Histoire \/ \/ \/ */
+    
+    .phistoire {
+        margin: 0 2rem 0 2rem;
+    }
+
+    .team, .histoire {
+        display: flex;
+        padding: 8px;
+        font-size: 2rem;
+        font-family: 'Cabin', sans-serif;
+    }
+    .favelas {
+        width: 100%;
+        height: 100%;
+    }  
+    h3{
+        font-family: 'Cabin', sans-serif;
+        text-align: center;
+        font-size: 5rem;
+    }
+    .phistoire h3 {
+        margin-bottom: 3rem;
+    }
+    .contenuhistoire{
+        display: flex;
+        flex-direction: column;
+    }
+    .recithistoire{
+        font-family: 'Cabin', sans-serif;
+        font-size: 200%;
+        padding: 2em;
+        margin-top: 1.5rem;
+    } 
+
+    /* /\ /\ /\ Histoire /\ /\ /\ */
+
+    /* \/ \/ \/ Team \/ \/ \/ */
+
+    .equipe-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .equipe-wrapper a {
+        display: flex;
+        justify-content: center;
+        margin-left: 2.75rem;
+    }
+
+    .equipe {
+        width: 1000px;
+        height: auto;
+    }
+
+    /* /\ /\ /\ Team /\ /\ /\ */
+
+}
+
+@media screen and (max-width: 890px) {
+    
+    /* \/ \/ \/ Nav bar \/ \/ \/ */
+
+    .navbar {
+        transform: scale(0.5);
+    }
+
+    .logo {
+        margin-right: 10rem;
+    }
+
+    .button a {
+        width: 12rem;
+    }
+
+    /* /\ /\ /\ Nav bar /\ /\ /\ */
+
+    .catalogue {
+        transform: scale(0.5);
+    }
+
+   .prez{
+       transform: scale(0.5);
+       margin-top: 10%;
+   }
+    
+
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .prez {
+        transform: scale(0.5);
+        margin-top: 2%;
+    }
+
+}
+
+
+/* /\ /\ /\ Media-Queries /\ /\ /\ */
+
+
+/* font-family: 'Cabin', sans-serif; */
+

@@ -19,7 +19,7 @@
 
   <div class="HEAD">
     <div class="navbar">
-      <img src="../img/logoV2.png" alt="logo de l'agence de voyage Project V" class="logo">
+     
       <div class="button">
         <a href="#H" class="histoire">Notre Histoire</a>
         <a href="#T" class="team">Notre équipe</a>
@@ -27,16 +27,11 @@
     </div>
 
     <div class="prez">
-      <h1>Project V</h1>
-      <p>L'Agence de voyage qui vous propose les activités les plus inédites.</p> <br>
+      
       <a href="../catalogue/catalogue.html" class="catalogue">Catalogue</a>
     </div>
     
     
     
-    <section class="showcase" id="A">
-      <video class="video" src="../Video/Sans titre (1).mp4" muted autoplay loop width="100%">
-      </video>
-      
-    </section>
+    
   </div>
