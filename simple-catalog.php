@@ -1,4 +1,7 @@
 <?php
+
+
+include "my-function.php";
 $products = ["iPhone", "iPad", "iMac"];
 sort($products);
 print_r($products);
