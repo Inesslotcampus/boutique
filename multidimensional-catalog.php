@@ -11,6 +11,7 @@ include "list_product.php";
      display: flex;
      flex-direction: column;
      align-items: center;
+     justify-content: center;
 
     }
 h2 {
@@ -23,6 +24,12 @@ p {
   font-family: courier;
   font-size: 100%;
 }
+
+.baseprice{
+    color: red;
+    
+
+}
 </style>
 <div class="print_catalog">
 <?php
@@ -32,31 +39,34 @@ p {
        <br>
         
         <img src="<?php echo $product["picture_url"]?>  " width="500" height="500">
-        <p>Prix de base: <?php echo formatPrice($product["price"])?> euros<p>
-        <p>Prix sans TVA: <?php echo priceExcludingVAT(formatPrice($product["price"]))?> euros<p>
+        
+        <?php if ($product["discount"] != null){ ?>
+        <p class=baseprice>Prix de base: <?php echo formatPrice($product["price"])?> euros<p>
         <p>Prix avec réduction: <?php echo displayDiscountedPrice($product["discount"],formatPrice($product["price"]))?> euros<p>
+
+        <?php }else{?>
+            <p class=baseprice>Prix: <?php echo formatPrice($product["price"])?> euros<p>
+            <?php }?>
+
+
+        <p>Prix sans TVA: <?php echo priceExcludingVAT(formatPrice($product["price"]))?> euros<p>
+          
+        <div class="formular">
+<form method="post" action= "cart.php">
+  Quantité: <input type="number" name="quantit">
+  <input type="hidden"  name="nameproduct" value=<?= $key ?>>
+  <input type="hidden"  name="priceunit" value=<?= formatPrice($product["price"]) ?>>
+  <input type="hidden"  name="price-tva" value=<?=priceExcludingVAT(formatPrice($product["price"]))?> >
+  <input type="hidden"  name="pricereduc" value=<?=displayDiscountedPrice($product["discount"],formatPrice($product["price"]))?> >
+  
+  <input type="submit">
+</form>
 
   
     <?php }?>
 </div>
 
-<div class="formular">
-<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-  Name: <input type="text" name="fname">
-  <input type="submit">
-</form>
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // collect value of input field
-  $name = $_POST['fname'];
-  if (empty($name)) {
-    echo "Name is empty";
-  } else {
-    echo $name;
-  }
-}
-?>
   
 
 
