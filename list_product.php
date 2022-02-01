@@ -4,7 +4,7 @@ $products = [
     "name" => "iPhone",
     "price" =>  45000,
     "price without tva" => 0 ,
-
+    
     "weight" => 200 ,
     "discount" => 10,
     "picture_url" => "https://mobilecity.co.nz/wp-content/uploads/2021/03/K17-scaled-4-1024x1024.jpg",

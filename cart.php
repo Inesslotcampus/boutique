@@ -8,6 +8,21 @@
 <h4>TOTAL: <?php echo $_POST['pricereduc']*$_POST['quantit'];?> euro</h4>
 </div>
 
+<div class="choicetransport">
+<form method="post" action= "cart.php">
+<select name="Transport">
+<option value="post">La poste</option>
+  <option value="saab">Colissimo</option>
+  </select>
+
+<input type="submit">
+</form>
+<?php 
+    var_dump($_POST)?>
+
+
+</div>
+
 
 <style>
     .payproduct{
@@ -15,4 +30,6 @@
         justify-content: space-around;
         
     }
+
+
 </style>

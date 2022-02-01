@@ -53,7 +53,7 @@ p {
           
         <div class="formular">
 <form method="post" action= "cart.php">
-  Quantité: <input type="number" name="quantit">
+  Quantité: <input type="number" name="quantit" required>
   <input type="hidden"  name="nameproduct" value=<?= $key ?>>
   <input type="hidden"  name="priceunit" value=<?= formatPrice($product["price"]) ?>>
   <input type="hidden"  name="price-tva" value=<?=priceExcludingVAT(formatPrice($product["price"]))?> >
@@ -63,7 +63,9 @@ p {
 </form>
 
   
-    <?php }?>
+    <?php }
+    var_dump($_POST)?>
+
 </div>
 
 
