@@ -1,43 +1,79 @@
+
 <?php
+include "header.html";
+
 include "my-function.php";
+include "list_product.php";
 
-$products = [
-    "iphone" => [
-    "name" => "iPhone",
-    "price" =>  formatPrice(45000),
-    "price without tva" => priceExcludingVAT(formatPrice(45000)),
-    "weight" => 200,
-    "discount" => 10,
-    "picture_url" => "<img src=https://mobilecity.co.nz/wp-content/uploads/2021/03/K17-scaled-4-1024x1024.jpg >",
-    ],
-    "ipad" => [
-    "name" => "iPad",
-    "price" => formatPrice(83900),
-    "price without tva" => priceExcludingVAT(formatPrice(83900)),
-    "weight" => 400,
-    "discount" => null,
-    "picture_url" => "<img src=https://m.media-amazon.com/images/I/81+N4PFF7jS._AC_SX466_.jpg>",
-    ],
-    "iMac"=>[
-        "name" => "<h2>iMac</h2>",
-    "price" => formatPrice(224900),
-    "price without tva" => priceExcludingVAT(formatPrice(224900)),
+?>
+<style>
+ .print_catalog{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
 
-    "weight" => 1200,
-    "discount" => 10,
-    "picture_url" => "<img src=https://www.apple.com/newsroom/images/product/imac/standard/apple_new-imac-spring21_hero_04202021.jpg.og.jpg?202112030956>",
-    ],
-
-    ];
-
-    foreach ($products as $product){
-        echo "<pre>";
-        print_r($product);
-        echo "</pre>";
-    
     }
-    var_dump($products["iphone"]["price"]);
-    var_dump(priceExcludingVAT($products["iphone"]["price"]));
+h2 {
+  
+  font-family: verdana;
+  font-size: 150%;
+}
+p {
+  
+  font-family: courier;
+  font-size: 100%;
+}
+</style>
+<div class="print_catalog">
+<?php
+    foreach ($products as $key=>$product){
+        ?>
+        <h2><?php echo $product["name"]?></h2>
+       <br>
+        
+        <img src="<?php echo $product["picture_url"]?>  " width="500" height="500">
+        <p>Prix de base: <?php echo formatPrice($product["price"])?> euros<p>
+        <p>Prix sans TVA: <?php echo priceExcludingVAT(formatPrice($product["price"]))?> euros<p>
+        <p>Prix avec réduction: <?php echo displayDiscountedPrice($product["discount"],formatPrice($product["price"]))?> euros<p>
+
+  
+    <?php }?>
+</div>
+
+<div class="formular">
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>
+  
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+    
 
 
     

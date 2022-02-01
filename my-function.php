@@ -5,7 +5,7 @@
 function formatPrice($pricec){
     $priceuro=$pricec/100;
     
-    return $priceuro . " euro";
+    return $priceuro;
     
 
 }
@@ -20,9 +20,18 @@ function priceExcludingVAT($priceTTC){
     $TVA=20;
     $priceHT=(100*$priceTTC)/(100+$TVA);
     
-    return $priceHT . " euro" ;
+    
+    return number_format($priceHT, 2);
     
 
+}
+
+
+function displayDiscountedPrice($discount,$price){
+    
+    $pricediscount=$price-$price*($discount/100);
+    return $pricediscount; 
+    
 }
 
 

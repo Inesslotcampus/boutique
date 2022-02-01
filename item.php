@@ -1,6 +1,7 @@
 
 
 <?php
+include "my-function.php";
 include "header.php";
 $nom="Table cube";
 $prix=" 250 euros";
